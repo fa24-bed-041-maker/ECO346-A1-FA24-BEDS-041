@@ -1,4 +1,4 @@
-# ECO346 Assignment 1 - PSLM 2019-20 Data Analysis
+# ECO346 Assignment 1 - PSLM 2019-20 Data Analysis.
 **Registration Number:** FA24-BEDS-041  
 **Variant:** Punjab Urban  
 
