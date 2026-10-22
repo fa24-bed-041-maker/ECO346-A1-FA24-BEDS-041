@@ -60,3 +60,13 @@ The redesign transforms a cluttered scatter plot into an actionable analytical v
 * **`scripts/`**: Contains replication scripts (`01_distribution.R`, `02_relationship.R`, `03_default.R`, `replication.py`).
 * **`figures/`**: Contains generated SVG visualizations (`distribution.svg`, `relationship.svg`, `default.svg`, `replication.svg`).
 * **`slides/`**: Presentation slides (`FA24-BEDS-041.pptx`).
+
+* ## Python Reproduction and Comparison
+
+* **Script Location:** `scripts/replication.py`
+* **Figure Output:** `figures/replication.svg`
+
+### Key Findings & Methodology:
+* **Numerical Parity:** The Python replication script successfully replicates the R analysis, achieving an exact numerical match for key metrics (e.g., the weighted mean for the 25-29 age band is precisely PKR 302,450 across both platforms).
+* **Implementation Differences:** While R utilizes `ggplot2`'s declarative grammar and built-in stat layers for distribution plots, Python (`matplotlib`/`pandas`) requires explicit mathematical aggregation for weighted averages and manual configuration of log-scaling tick marks.
+* **Visual Output:** The generated SVG figure accurately reflects the age-earnings profile and distribution trends established in the primary R workflow.
