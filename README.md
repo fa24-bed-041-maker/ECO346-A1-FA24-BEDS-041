@@ -67,10 +67,24 @@ slides/: Presentation slides.
  The redesign transforms a cluttered scatter plot into an actionable analytical visual through three core principles:
  
  Overplotting Mitigation & Data Transparency:
+
+ 
  Replacing solid black points with semi-transparent, horizontally jittered points reduces overplotting, making data density visible across age groups.
+
+ 
  Logarithmic Scaling: 
+
+ 
  Applying a $\log_{10}$ scale to annual earnings normalizes the heavily right-skewed income distribution, improving the perceptual ranking of high-earning observations.
+
+ 
  Conditional Summarization & Data-Ink Ratio: 
+
+ 
  Adding weighted mean age-band markers joined by a line highlights the macro conditional age-earnings profile, maximizing relevant data-ink without visual noise.
+
+ 
  Trade-off:
+
+ 
  While the redesign emphasizes overall trends and conditional means, it hides individual extreme earnings outliers and specific micro-level dispersion within each age band that were visible in the unsummarized default scatter plot.
