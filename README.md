@@ -61,7 +61,7 @@ The redesign transforms a cluttered scatter plot into an actionable analytical v
 * **`figures/`**: Contains generated SVG visualizations (`distribution.svg`, `relationship.svg`, `default.svg`, `replication.svg`).
 * **`slides/`**: Presentation slides (`FA24-BEDS-041.pptx`).
 
-* ## Python Reproduction and Comparison
+* ## Python Reproduction and Comparison ( Question 5 )
 
 * **Script Location:** `scripts/replication.py`
 * **Figure Output:** `figures/replication.svg`
