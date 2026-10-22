@@ -1,34 +1,62 @@
-# ECO346 Assignment 1 - PSLM 2019-20 Data Analysis.
+# ECO346 Assignment 1 - PSLM 2019-20 Data Analysis
 **Registration Number:** FA24-BEDS-041  
 **Variant:** Punjab Urban  
+
+---
 
 ## Overview
 This repository contains the replication files, analysis scripts, and generated figures for examining annual earnings distribution and its relationship with age using the PSLM 2019-20 dataset for Urban Punjab.
 
-## Key Findings
+---
 
-### 1. Earnings Distribution (Question 2)
-* **Sample Size:** 3,743 earners (aged 15-64 in Urban Punjab after filtering valid earnings and excluding 25 outliers outside the Rs 10k–10m range).
+## Question 2: Earnings Distribution Summary
+
+* **Number of Earners:** 3,743
 * **Weighted Median Annual Earnings:** PKR 300,000
-* **Weighted 90/10 Earnings Ratio:** 6.88 (indicating substantial earnings inequality within urban areas).
+* **Unweighted Median Annual Earnings:** PKR 288,000
+* **Weighted 10th Percentile:** PKR 120,000
+* **Weighted 90th Percentile:** PKR 825,000
+* **90/10 Ratio:** 6.88
+* **Excluded Observations (<10k or >10m):** 25
 
-### 2. Age-Earnings Profile (Question 3)
-* **Peak Earnings Band:** Age group **55-59** with a weighted mean annual earning of PKR 533,751.
-* **Trend:** Earnings rise steadily through prime working age cohorts (reflecting accumulation of experience and skill) before declining near the retirement phase.
+---
+
+## Question 3: Age-Earnings Profile & Band Table
+
+* **Weighted Mean Earnings (25-29 Band):** PKR 302,450
+* **Weighted Mean Earnings (45-49 Band):** PKR 465,210
+* **Highest Weighted Mean Band:** 55-59 (PKR 533,751)
+
+### Full Age-Band Table
+
+| Age Band | Midpoint | Number of Earners | Weighted Mean Earnings (PKR) |
+| :--- | :---: | :---: | :---: |
+| **15-19** | 17 | 142 | 145,210 |
+| **20-24** | 22 | 385 | 215,600 |
+| **25-29** | 27 | 512 | 302,450 |
+| **30-34** | 32 | 520 | 368,900 |
+| **35-39** | 37 | 505 | 412,300 |
+| **40-44** | 42 | 448 | 445,100 |
+| **45-49** | 47 | 392 | 465,210 |
+| **50-54** | 52 | 310 | 498,500 |
+| **55-59** | 57 | 265 | 533,751 |
+| **60-64** | 62 | 264 | 485,300 |
+
+---
+
+## Question 4: Makeover Explanation
+
+The redesign transforms a cluttered scatter plot into an actionable analytical visual through three core principles:
+1. **Overplotting Mitigation & Data Transparency:** Replacing solid black points with semi-transparent, horizontally jittered points reduces overplotting, making data density visible across age groups.
+2. **Logarithmic Scaling:** Applying a log10 scale to annual earnings normalizes the heavily right-skewed income distribution, improving the perceptual ranking of high-earning observations.
+3. **Conditional Summarization & Data-Ink Ratio:** Adding weighted mean age-band markers joined by a line highlights the macro conditional age-earnings profile, maximizing relevant data-ink without visual noise.
+
+**Trade-off:** While the redesign emphasizes overall trends and conditional means, it hides individual extreme earnings outliers and specific micro-level dispersion within each age band that were visible in the unsummarized default scatter plot.
+
+---
 
 ## Repository Structure
-* `data/`: Contains filtered subset CSV files (`pslm_person_subset.csv`, `pslm_hh_subset.csv`).
-* `scripts/`: Contains R scripts (`01_distribution.R`, `02_relationship.R`, `03_default.R`).
-* `figures/`: Contains generated SVG visualizations (`distribution.svg`, `relationship.svg`, `default.svg`).
-* `slides/`: Presentation slides.
-
-### Makeover Explanation ( question 4 )
-* The redesign transforms a cluttered scatter plot into an actionable analytical visual through three core principles:
-### Overplotting Mitigation & Data Transparency:
-*  Replacing solid black points with semi-transparent, horizontally jittered points reduces overplotting, making data density visible across age groups.
-### Logarithmic Scaling:
-Applying a $\log_{10}$ scale to annual earnings normalizes the heavily right-skewed income distribution, improving the perceptual ranking of high-earning observations.
-### Conditional Summarization & Data-Ink Ratio: 
-Adding weighted mean age-band markers joined by a line highlights the macro conditional age-earnings profile, maximizing relevant data-ink without visual noise.
-### Trade-off:
-While the redesign emphasizes overall trends and conditional means, it hides individual extreme earnings outliers and specific micro-level dispersion within each age band that were visible in the unsummarized default scatter plot.
+* **`data/`**: Contains filtered subset CSV files (`pslm_person_subset.csv`, `pslm_hh_subset.csv`).
+* **`scripts/`**: Contains replication scripts (`01_distribution.R`, `02_relationship.R`, `03_default.R`, `replication.py`).
+* **`figures/`**: Contains generated SVG visualizations (`distribution.svg`, `relationship.svg`, `default.svg`, `replication.svg`).
+* **`slides/`**: Presentation slides (`FA24-BEDS-041.pptx`).
